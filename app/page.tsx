@@ -1,12 +1,16 @@
 "use client";
-import Navbar from "@/components/Navbar";
 import { FaGithub, FaLinkedin  } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
-      <Navbar />
-      
+    <div className="min-h-screen relative"> 
+      <nav className="fixed top-0 px-4 sm:px-8 pb-8 pt-4 bg-gradient-to-t from-white">
+        <div className="flex justify-between items-center max-w-4xl mx-auto">
+          <div></div>
+          <Link href="/"><div className="font-mono">rahulhoque [dot] com</div></Link>
+        </div>
+      </nav>     
       <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -26,17 +30,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='w-full h-[.01rem] bg-black mt-2'></div>   
-            <p className="font-medium text-xl">Contact:</p> <a href="mailto:rhoque@umich.edu" target="_blank"><p className="text-xs">rhoque [at] umich [dot] edu</p></a>         
+          <div className='w-full h-[.01rem] bg-black mt-2'></div> 
+            <div className="flex flex-row gap-4 font-mono">
+                <a href="/projects/"><p>projects</p></a>
+                <a><p>resume</p></a>
+                <a href="mailto:rhoque@umich.edu" target="_blank"><p>email</p></a>
+            </div>  
           </div>
       </main>
-
-      <footer className="fixed bottom-0 w-full px-4 sm:px-8 pb-8 pt-4 bg-gradient-to-t from-white">
-        <div className="flex justify-between items-center max-w-4xl mx-auto">
-          <div></div>
-          <div className="font-mono">rahulhoque [dot] com</div>
-        </div>
-      </footer>
     </div>
   );
 }

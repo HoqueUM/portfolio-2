@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import Project from '@/components/project';
 import { supabase } from '@/lib/supabaseClient';
-import Navbar from "@/components/Navbar";
+import Link from 'next/link';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 interface ProjectData {
   key: string;
@@ -27,32 +28,40 @@ const fetchProjects = async () => {
 };
 
 export default function Projects() {
-    const [projects, setProjects] = useState<ProjectData[]>([]);
-    useEffect(() => {
-      const getProjects = async () => {
-        const projectsData = await fetchProjects();
-        setProjects(projectsData);
-      };
-  
-      getProjects();
-    }, []);
-    return (
-      <div>
-      <Navbar />
-      <div className="flex flex-center justify-center">
-      <div className='flex flex-center jusify cennter w-screen'>
-        {projects.map((project) => (
-          <Project
-            key={project.key}
-            name={project.name}
-            image={project.image}
-            description={project.description}
-            link={project.link}
-          />
-        ))}
-      </div>
-      </div>
+  const [projects, setProjects] = useState<ProjectData[]>([]);
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const projectsData = await fetchProjects();
+      setProjects(projectsData);
+    };
+
+    getProjects();
+  }, []);
+
+  return (
+    <div className="min-h-screen relative">
+      <nav className="fixed top-0 px-4 sm:px-8 pb-8 pt-4 bg-gradient-to-t from-white">
+        <div className="flex justify-between items-center max-w-4xl mx-auto">
+          <div></div>
+          <Link href="/"><div className="font-mono">rahulhoque [dot] com</div></Link>
+        </div>
+      </nav> 
+      <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {projects.map((project) => (
+              <Project
+                key={project.key}
+                name={project.name}
+                image={project.image}
+                description={project.description}
+                link={project.link}
+              />
+            ))}
+          </div>
+        </div>
+      </main>
     </div>
-    );
+  );
 }
-  
