@@ -1,21 +1,27 @@
-import type { Config } from "tailwindcss";
-import tailwindcssAnimated from 'tailwindcss-animated';
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      animation: {
+        'trace': '0.3s ease-out forwards',
+      },
+      keyframes: {
+        trace: {
+          '0%': { transform: 'scaleX(0)', transformOrigin: 'bottom right' },
+          '100%': { transform: 'scaleX(1)', transformOrigin: 'bottom left' },
+        },
       },
     },
   },
-  plugins: [
-    tailwindcssAnimated,
-  ],
-} satisfies Config;
+  plugins: [],
+}

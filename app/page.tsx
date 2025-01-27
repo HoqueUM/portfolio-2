@@ -8,7 +8,7 @@ export default function Home() {
       <nav className="fixed top-0 px-4 sm:px-8 pb-8 pt-4 bg-gradient-to-t from-white">
         <div className="flex justify-between items-center max-w-4xl mx-auto">
           <div></div>
-          <Link href="/"><div className="font-mono">rahulhoque [dot] com</div></Link>
+          <Link href="/"><div className="font-mono trace">rahulhoque [dot] com</div></Link>
         </div>
       </nav>     
       <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
@@ -21,20 +21,20 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full h-[.01rem] bg-black mt-2'></div>            
+          <div className='w-full h-[.01rem] bg-black mt-2 trace-both element-to-animate'></div>            
           
-          <div className="prose max-w-none">
+          <div className="prose max-w-none trace-both-slow elment-to-animate">
             <p>
             Hi👋 I&apos;m Rahul, a junior at the University of Michigan studying computer science. I am passionate
             about software development, data science, and machine learning. I usually work in React, Python, and C++.
             </p>
           </div>
 
-          <div className='w-full h-[.01rem] bg-black mt-2'></div> 
+          <div className='w-full h-[.01rem] bg-black mt-2 trace-both element-to-animate'></div> 
             <div className="flex flex-row gap-4 font-mono">
-                <a href="/projects/"><p>projects</p></a>
-                <a><p>resume</p></a>
-                <a href="mailto:rhoque@umich.edu" target="_blank"><p>email</p></a>
+                <a href="/projects/" className="trace"><p>projects</p></a>
+                <a className="trace"><p>resume</p></a>
+                <a href="mailto:rhoque@umich.edu" target="_blank" className="trace"><p>email</p></a>
             </div>  
           </div>
       </main>

@@ -43,7 +43,7 @@ export default function Projects() {
       <nav className="fixed top-0 px-4 sm:px-8 pb-8 pt-4 bg-gradient-to-t from-white">
         <div className="flex justify-between items-center max-w-4xl mx-auto">
           <div></div>
-          <Link href="/"><div className="font-mono">rahulhoque [dot] com</div></Link>
+          <Link href="/"><div className="font-mono trace">rahulhoque [dot] com</div></Link>
         </div>
       </nav> 
       <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
