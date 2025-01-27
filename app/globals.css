@@ -64,8 +64,8 @@ body {
 
 @keyframes traceBoth {
   0% {
-    clip-path: inset(0 50% 0 50%);
-    opacity: 0;
+    clip-path: inset(0 100% 100% 0);
+    opacity: 1;
   }
   100% {
     clip-path: inset(0 0 0 0);
@@ -74,11 +74,11 @@ body {
 }
 
 .trace-both-slow {
-  animation: traceBoth 1.5s ease-out forwards;
+  animation: traceBoth 2s ease-out forwards;
 }
 
 .trace-both {
-  animation: traceBoth 1.0s ease-out forwards;
+  animation: traceBoth 1.5s ease-out forwards;
 }
 
 .trace-fast {
