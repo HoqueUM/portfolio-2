@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Project from '@/components/project';
 import { supabase } from '@/lib/supabaseClient';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 interface ProjectData {
   key: string;
