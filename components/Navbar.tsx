@@ -1,20 +1,36 @@
-import React from 'react'
-import Link from 'next/link'
+"use client"
+// import React, { useState } from 'react';
+import Link from 'next/link';
+// import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  return (
-    <div>
-    <div className="top-0 right-0 p-8 w-screen h-4 pt-4">
-      <div className="font-mono flex flex-row items-start justify-end space-x-4">
-        <Link href="/"><p>Home</p></Link>
-        <a href="/projects/"><p>Projects</p></a>
-        <a href="/writing/"><p>Writing</p></a>
-        <a href="/videos/"><p>Videos</p></a>
-        <a href="/contact/"><p>Contact</p></a>
-      </div>
-    </div>
-    </div>
-  )
-}
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-export default Navbar
+  const navLinks = [
+    { href: '/', text: 'Home' },
+    { href: '/projects/', text: 'Projects' },
+    // { href: '/writing/', text: 'Writing' },
+    // { href: '/videos/', text: 'Videos' },
+    // { href: '/contact/', text: 'Contact' }
+  ];
+
+  return (
+    <nav className="w-full top-0 z-50 p-4">
+      <div className="flex justify-between static right-0 sm:top-3 md:top-4 lg:top-5 xl:top-6 2xl:top-7 left-0">
+        <div className="flex justify-end space-x-6 font-mono">
+          {navLinks.map(({ href, text }) => (
+            <Link 
+              key={href} 
+              href={href}
+              className="hover:text-gray-600 transition-colors"
+            >
+              {text}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

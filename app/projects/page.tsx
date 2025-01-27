@@ -39,7 +39,8 @@ export default function Projects() {
     return (
       <div>
       <Navbar />
-      <div className="projects-list">
+      <div className="flex flex-center justify-center">
+      <div className='flex flex-center jusify cennter w-screen'>
         {projects.map((project) => (
           <Project
             key={project.key}
@@ -49,6 +50,7 @@ export default function Projects() {
             link={project.link}
           />
         ))}
+      </div>
       </div>
     </div>
     );
