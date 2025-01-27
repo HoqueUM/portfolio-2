@@ -74,11 +74,11 @@ body {
 }
 
 .trace-both-slow {
-  animation: traceBoth 2s ease-out forwards;
+  animation: traceBoth 1.5s ease-out forwards;
 }
 
 .trace-both {
-  animation: traceBoth 1.5s ease-out forwards;
+  animation: traceBoth 1.0s ease-out forwards;
 }
 
 .trace-fast {
