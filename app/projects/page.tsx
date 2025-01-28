@@ -40,7 +40,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen relative">
-      <nav className="fixed top-0 px-4 sm:px-8 pb-8 pt-4">
+      <nav className="top-0 px-4 sm:px-8 pb-8 pt-4">
         <div className="flex justify-between items-center max-w-4xl mx-auto">
           <div></div>
           <Link href="/"><div className="font-mono trace">rahulhoque [dot] com</div></Link>
