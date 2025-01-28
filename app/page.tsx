@@ -33,8 +33,8 @@ export default function Home() {
           <div className='w-full h-[.01rem] bg-black mt-2'></div> 
             <div className="flex flex-row gap-4 font-mono">
                 <a href="/projects/" className="trace"><p>projects</p></a>
-                <a className="trace"><p>resume</p></a>
-                <a href="mailto:rhoque@umich.edu" target="_blank" className="trace"><p>email</p></a>
+                <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="trace"><p>resume</p></a>
+                <a href="mailto:rhoque@umich.edu"className="trace"><p>email</p></a>
             </div>  
           </div>
       </main>
