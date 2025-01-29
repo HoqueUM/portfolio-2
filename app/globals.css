@@ -121,3 +121,11 @@ body {
 .collapsible-arrow.expanded {
   transform: rotate(180deg);
 }
+
+.bullet {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: black;
+  border-radius: 50%;
+}

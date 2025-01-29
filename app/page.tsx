@@ -31,11 +31,14 @@ export default function Home() {
           </div>
 
           <div className='w-full h-[.01rem] bg-black mt-2'></div> 
-            <div className="flex flex-row gap-4 font-mono">
+            <div className="flex flex-row gap-4 font-mono items-center">
                 <a href="/projects/" className="trace"><p>projects</p></a>
+                <div className="bullet"></div>
                 <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="trace"><p>resume</p></a>
+                <div className="bullet"></div>
                 <a href="mailto:rhoque@umich.edu"className="trace"><p>email</p></a>
-                <a href="/wordscapes-solver/" className="trace"><p>Wordscape Solver</p></a>
+                <div className="bullet"></div>
+                <a href="/wordscapes-solver/" className="trace"><p>wordscape solver</p></a>
             </div>  
           </div>
       </main>
