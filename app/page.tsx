@@ -35,6 +35,7 @@ export default function Home() {
                 <a href="/projects/" className="trace"><p>projects</p></a>
                 <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="trace"><p>resume</p></a>
                 <a href="mailto:rhoque@umich.edu"className="trace"><p>email</p></a>
+                <a href="/wordscapes-solver/" className="trace"><p>Wordscape Solver</p></a>
             </div>  
           </div>
       </main>

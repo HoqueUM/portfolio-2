@@ -10,7 +10,7 @@ e5d3b3
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #ffffff;
+  --primary: #fffafa;
   --secondary: #171717;
 }
 
@@ -100,4 +100,24 @@ body {
 
 .element-to-animate {
   opacity: 0;
+}
+
+.collapsible-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.collapsible-arrow {
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.collapsible-arrow.collapsed {
+  transform: rotate(0deg);
+}
+
+.collapsible-arrow.expanded {
+  transform: rotate(180deg);
 }
