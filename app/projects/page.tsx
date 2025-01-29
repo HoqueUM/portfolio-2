@@ -40,13 +40,12 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen relative">
-      <nav className="top-0 px-4 sm:px-8 pb-8 pt-4">
-        <div className="flex justify-between items-center max-w-4xl mx-auto">
-          <div></div>
+      <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
+      <nav className="top-0 pb-4 pt-4">
+        <div className="flex">
           <Link href="/"><div className="font-mono trace">rahulhoque [dot] com</div></Link>
         </div>
       </nav> 
-      <main className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {projects.map((project) => (
