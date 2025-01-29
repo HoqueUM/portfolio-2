@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import DisplayOutput from "@/components/DisplayOutput";
+import { BsArrowReturnLeft } from "react-icons/bs";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,7 +13,7 @@ export default function Home() {
     <div className="px-4 sm:px-8 pt-16 pb-24 max-w-4xl mx-auto">
       <nav className="top-0 pb-4 pt-4">
         <div className="flex">
-          <Link href="/"><div className="font-mono trace">rahulhoque [dot] com</div></Link>
+          <Link href="/"><div className="font-mono trace"><BsArrowReturnLeft /></div></Link>
         </div>
       </nav> 
       <div className="flex flex-col items-center justify-center ">
