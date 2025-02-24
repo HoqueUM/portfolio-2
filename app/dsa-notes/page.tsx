@@ -13,7 +13,15 @@ export default function Home() {
       </nav> 
         <div className="flex font-mono">
             <div className="flex flex-col gap-4">
-            work in progress...
+              <div>Sliding Window | Two Pointers | Fast & Slow Pointers</div>
+              <div>Merge Intervals | Cyclic Sort | In-Place Reversal of a LinkedList</div>
+              <div>Tree BFS | Tree DFS | Two Heaps | Subsets</div>
+              <div>Modified Binary Search | Top K Elements</div>
+              <div>K-way Merge | Knapsack | Topological Sort | Matrix Traversal</div>
+            <br />
+            <div>
+              <h1>Sliding Window</h1>
+            </div>
         </div>
         </div>
       </main>
