@@ -30,7 +30,7 @@ export default function Home() {
               {
                 
 `def sliding_window(nums):
-  # Iterate over elements in our input, this is usually while left < len(nums)
+  # Iterate over elements in our input, this is usually while right < len(nums)...SOME PROBLEMS REQUIRE DOUBLE LOOP
       # Expand the window
       # Meet the condition to stop expansion
           # Process the current window   
