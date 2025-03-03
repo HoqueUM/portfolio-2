@@ -22,6 +22,9 @@ export default function Home() {
               <div>K-way Merge | Knapsack | Topological Sort | Matrix Traversal</div>
             <br />
             <div>
+              <a href="https://leetcode.com/explore/interview/card/cheatsheets/720/resources/4723/" target="_blank" className="w-min trace">Templates</a>
+            </div>
+            <div>
               <h1 className="font-bold">Sliding Window</h1>
               The sliding window technique is a method of extracting information from a subarray.
               Depending on the problem, this could either require you to expand or contract the window.
