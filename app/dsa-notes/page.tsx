@@ -28,24 +28,61 @@ export default function Home() {
               <h1 className="font-bold">Sliding Window</h1>
               The sliding window technique is a method of extracting information from a subarray.
               Depending on the problem, this could either require you to expand or contract the window.
-              A really good &apos;pesudocode&apos; I found <a href="https://medium.com/@timpark0807/leetcode-is-easy-sliding-window-c44c11cc33e1" target="blank" className="underline">here</a> gave this:
+              A really good &apos;pesudocode&apos; I found on the wonderful leetcode templates website gave this:
               <SyntaxHighlighter language="python" style={vscDarkPlus}>
               {
                 
-`def sliding_window(nums):
-  # Iterate over elements in our input, this is usually while right < len(nums)...SOME PROBLEMS REQUIRE DOUBLE LOOP
-      # Expand the window
-      # Meet the condition to stop expansion
-          # Process the current window   
-          # Contract the window`}
+`def fn(arr):
+    left = ans = curr = 0
+
+    for right in range(len(arr)):
+        # do logic here to add arr[right] to curr
+
+        while WINDOW_CONDITION_BROKEN:
+            # remove arr[left] from curr
+            left += 1
+
+        # update ans
+    
+    return ans`}
               </SyntaxHighlighter> 
               The code filled in will depend on the problem (of course), but &apos;required&apos; variables are as follows:
               <ul>
                 <li>left: the left boundary of our window</li>
                 <li>right: the right boundary of our window</li>
                 <li>result (or final return value): the result we are looking for</li>
-                <li>counter (or tracker): a counter that we can use to keep track of the window&apos;s state</li>
+                <li>counter (or tracker): a counter that we can use to keep track of the window&apos;s state (can also be a dict, or list, or set)</li>
               </ul>        
+            </div>
+            <div>
+            <h1 className="font-bold">Two Pointers (left and right)</h1>
+            The two pointer technique is a method of using two pointers to traverse a list or array.
+            It allows you to do this in linear time. It requires a sorted array.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(arr):
+    left = ans = 0
+    right = len(arr) - 1
+
+    while left < right:
+        # do some logic here with left and right
+        if CONDITION:
+            left += 1
+        else:
+            right -= 1
+    
+    return ans
+
+            `}
+            </SyntaxHighlighter>
+            This does not mean it will always be one loop every time. It can be nested loops as well.
+            Most of the higher-level problems will require nested loops, with this pattern being in the inner loop.
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>left: the left pointer</li>
+              <li>right: the right pointer</li>
+              <li>result (or final return value): the result we are looking for</li>
+            </ul>
             </div>
         </div>
         </div>
