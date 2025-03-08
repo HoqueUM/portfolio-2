@@ -1,4 +1,7 @@
 "use client";
+
+// TODO: add "problem statement": which is basically just a description of how to identify what kind of problem is it.
+
 import Link from "next/link";
 import { BsArrowReturnLeft } from "react-icons/bs";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -26,6 +29,10 @@ export default function Home() {
             </div>
             <div>
               <h1 className="font-bold">Sliding Window</h1>
+              <br />
+              <h2 className="font-bold">Problem Statement: </h2>
+              <p>given an array/string find some minimum/maximum (or target) of it.</p>
+              <br />
               The sliding window technique is a method of extracting information from a subarray.
               Depending on the problem, this could either require you to expand or contract the window.
               A really good &apos;pesudocode&apos; I found on the wonderful leetcode templates website gave this:
@@ -56,6 +63,10 @@ export default function Home() {
             </div>
             <div>
             <h1 className="font-bold">Two Pointers (left and right)</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Give a sorted array, find an array/amount/minimum/maximum of goal such that it satisfies some constraint.</p>
+            <br />
             The two pointer technique is a method of using two pointers to traverse a list or array.
             It allows you to do this in linear time. It requires a sorted array.
             <SyntaxHighlighter language="python" style={vscDarkPlus}>
@@ -63,9 +74,11 @@ export default function Home() {
 def fn(arr):
     left = ans = 0
     right = len(arr) - 1
-
+    
+    # this could be nested in a loop (this keeps values locked while left and right are moving)
     while left < right:
         # do some logic here with left and right
+        # could be a while loop, or if statement
         if CONDITION:
             left += 1
         else:
