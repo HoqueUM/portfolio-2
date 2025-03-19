@@ -65,7 +65,7 @@ export default function Home() {
             <h1 className="font-bold">Two Pointers (left and right)</h1>
             <br />
             <h2 className="font-bold">Problem Statement: </h2>
-            <p>Give a sorted array, find an array/amount/minimum/maximum of goal such that it satisfies some constraint.</p>
+            <p>Given a sorted array, find an array/amount/minimum/maximum of goal such that it satisfies some constraint.</p>
             <br />
             The two pointer technique is a method of using two pointers to traverse a list or array.
             It allows you to do this in linear time. It requires a sorted array.
@@ -94,6 +94,39 @@ def fn(arr):
             <ul>
               <li>left: the left pointer</li>
               <li>right: the right pointer</li>
+              <li>result (or final return value): the result we are looking for</li>
+            </ul>
+            </div>
+            <div>
+            <h1 className="font-bold">Two Pointers (fast and slow)</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a sequential data structure (like a linked list or array), determine a cycle, find cyclic properties, or locate position.</p>
+            <br />
+            The fast and slow pointer technique is a method of using two pointers to traverse a linked list or array.
+            It allows you to do this in linear time.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(head):
+    slow = head
+    fast = head
+    ans = 0
+
+    while fast and fast.next:
+        # do logic
+        slow = slow.next
+        fast = fast.next.next
+    
+    return ans
+
+            `}
+            </SyntaxHighlighter>
+            This does not mean it will always be one loop every time. It can have multiple loops as well.
+            Most of the higher-level problems will require multiple loops, with the help of a secondary DS.
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>slow: the slow pointer</li>
+              <li>fast: the fast pointer</li>
               <li>result (or final return value): the result we are looking for</li>
             </ul>
             </div>
