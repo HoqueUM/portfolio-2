@@ -45,9 +45,9 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: black;
+  background-color: rgb(107 114 128);
   transform: scaleX(0);
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   transition: transform 0.3s ease-out;
 }
 
@@ -126,6 +126,6 @@ body {
   display: inline-block;
   width: 4px;
   height: 4px;
-  background-color: black;
+  background-color: rgb(107 114 128);
   border-radius: 50%;
 }
