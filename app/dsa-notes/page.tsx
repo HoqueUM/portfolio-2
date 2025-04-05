@@ -131,6 +131,12 @@ def fn(head):
             </ul>
             </div>
         </div>
+        <div>
+        <h1 className="font-bold">Intervals</h1>
+        <br />
+        Honestly this one kinda hard so we just gonna skip it for now.
+        Going to move on to cyclic sort, which seems a bit more approachable.
+        </div>
         </div>
       </main>
     </div>
