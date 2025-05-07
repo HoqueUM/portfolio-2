@@ -40,16 +40,20 @@ export default function Home() {
               {
                 
 `def fn(arr):
-    left = ans = curr = 0
+    left = 0
+    right = 0
+    ans = list/value
+    tracker = set/hasmap
 
-    for right in range(len(arr)):
-        # do logic here to add arr[right] to curr
+    while right < len(arr):
+        # do logic here to add arr[right] to tracker
 
         while WINDOW_CONDITION_BROKEN:
             # remove arr[left] from curr
             left += 1
 
         # update ans
+        right += 1
     
     return ans`}
               </SyntaxHighlighter> 
@@ -129,12 +133,64 @@ def fn(head):
               <li>fast: the fast pointer</li>
               <li>result (or final return value): the result we are looking for</li>
             </ul>
+            <h2 className="font-bold">Splitting a linked list</h2>
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+{`
+
+`}
+            </SyntaxHighlighter>
             </div>
             <div>
               <h1 className="font-bold">Intervals</h1>
               <br />
               Honestly this one kinda hard so we just gonna skip it for now.
               Going to move on to cyclic sort, which seems a bit more approachable.
+        </div>
+        <div>
+            <h1 className="font-bold">Cyclic Sort</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given an array of values [0/1, n] (VERY IMPORTANT) sort/arrange them.</p>
+            <br />
+            The cyclic sort technique is a method of sorting an array in linear time. The key difference
+            from other sorting algorithms is that the constraints of the values in the array are known (sequential).
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(arr):
+    i = 0
+    while i < len(arr):
+      if arr[i] != i: # condition can be changed given the problem
+        arr[arr[i]], arr[i] = arr[i], arr[arr[i]]
+      else:
+        i += 1
+
+    return arr
+            `}
+            </SyntaxHighlighter>
+            <h2 className="font-bold">Alternative: Negative Marking</h2>
+            <br />
+            A lot of the problems that were labeled cyclic sort by Grok could also be solved using negative marking.
+            This made the problem a lot easier to solve, and it is a good alternative to ones that are not
+            as clear when solving with cyclic sort.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+            
+def fn(arr):
+    ans = # list/value
+    for i in range(len(arr)):
+        index = abs(arr[i])
+        if arr[index] >= 0:
+              # mark
+    for i in range(len(arr)):
+        if arr[i] > 0:
+          # update ans
+
+            `}
+            </SyntaxHighlighter> 
+
+        <h2 className="font-bold">Some helpful facts</h2>
+        An array can be represented as a graph, with each index being a node and the value being the edge.
+        Al ways fix the current index, do not move on until it is correct.  
         </div>
         </div>
         </div>
