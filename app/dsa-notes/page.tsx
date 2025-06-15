@@ -192,7 +192,6 @@ def fn(arr):
         An array can be represented as a graph, with each index being a node and the value being the edge.
         Al ways fix the current index, do not move on until it is correct.  
         </div>
-        </div>
         <div>
             <h1 className="font-bold">Reversing a linked list</h1>
             <br />
@@ -225,6 +224,7 @@ def fn(head):
               <li>tmp: a holder for the next pointer while it is being swapped with prev.</li>
             </ul>
             </div>
+        </div>
         </div>
       </main>
     </div>
