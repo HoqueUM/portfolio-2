@@ -193,6 +193,38 @@ def fn(arr):
         Al ways fix the current index, do not move on until it is correct.  
         </div>
         </div>
+        <div>
+            <h1 className="font-bold">Reversing a linked list</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Sort a linked list at any point.</p>
+            <br />
+            A technique of sorting a linked list in place and in linear time.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(head):
+  curr = head
+  prev = None
+
+  while curr:
+      tmp = curr.next
+      curr.next = prev
+      prev = curr
+      curr = tmp
+  
+  return prev
+
+            `}
+            </SyntaxHighlighter>
+            This does not mean that it will be the whole list everytime. It could be
+            half, or a certain amount etc.
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>curr: the current node to be reversed</li>
+              <li>prev: the next next node of the current pointer.</li>
+              <li>tmp: a holder for the next pointer while it is being swapped with prev.</li>
+            </ul>
+            </div>
         </div>
       </main>
     </div>
