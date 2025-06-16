@@ -36,13 +36,13 @@ export default function Home() {
           {/* Navigation Links - Stacked on mobile, horizontal on larger screens */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full text-gray-500 font-mono text-xs sm:text-sm">
             <nav className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
-              <a href="/projects/" className="hover:text-gray-800 transition-colors pb-2 sm:pb-0">projects</a>
+              <a href="/projects/" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">projects</a>
               <div className="hidden sm:block bullet"></div>
-              <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="hover:text-gray-800 transition-colors pb-2 sm:pb-0">resume</a>
+              <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">resume</a>
               <div className="hidden sm:block bullet"></div>
-              <a href="mailto:rhoque@umich.edu" className="hover:text-gray-800 transition-colors pb-2 sm:pb-0">email</a>
+              <a href="mailto:rhoque@umich.edu" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">email</a>
               <div className="hidden sm:block bullet"></div>
-              <a href="/wordscapes-solver/" className="hover:text-gray-800 transition-colors pb-2 sm:pb-0">wordscape solver</a>
+              <a href="/wordscapes-solver/" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">wordscape solver</a>
               <div className="hidden sm:block bullet"></div>
               <div className="text-gray-500 pt-1 sm:pt-0">rahulhoque [dot] com</div>
             </nav>
