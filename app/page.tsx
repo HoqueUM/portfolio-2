@@ -26,7 +26,7 @@ export default function Home() {
           
           <div className="prose max-w-none">
             <p className="text-sm sm:text-base">
-              Hi👋 I&apos;m Rahul, a junior at the University of Michigan studying computer science. I am passionate
+              Hi👋 I&apos;m Rahul, a senior at the University of Michigan studying computer science. I am passionate
               about software development, data science, and machine learning. I usually work in React, Python, and C++.
             </p>
           </div>
