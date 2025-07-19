@@ -224,6 +224,77 @@ def fn(head):
               <li>tmp: a holder for the next pointer while it is being swapped with prev.</li>
             </ul>
             </div>
+            <div>
+            <h1 className="font-bold">Binary Tree BFS</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a binary tree, progress through the levels in some way.</p>
+            <br />
+            A technique of progressing through a binary tree level by level.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(head):
+  # some other stuff like edge cases
+  q = []
+  q.append(head)
+  result = []
+  while q:
+    curr = q.pop(0)
+    for node in curr:
+      # do logic here with result
+      # add child nodes to next level list
+  
+  return result
+
+            `}
+            </SyntaxHighlighter>
+            Sometimes you will have to make a copy of the q
+            but these cases will be fairly obvious when they happen.
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>q: the q holding each level.</li>
+              <li>curr: the current level within the q</li>
+            </ul>
+            </div>
+            <div>
+            <h1 className="font-bold">Binary Tree DFS</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a binary tree, go to the bottom leaf nodes and do something.</p>
+            <br />
+            A technique of progressing through a binary tree to the bottom in a certain way.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(head):
+  def dfs(parameters, here, like, this):
+   if not curr:
+    return
+   # do logic here with curr and target
+   if not currleft and not curr.right: # sometimes more
+    add to result
+    return
+   # dfs on left
+   # dfs on right
+  
+   return
+
+  result = []
+
+  # call dfs
+  
+  return result
+
+            `}
+            </SyntaxHighlighter>
+            Most will require you to make a separate function.
+            Always use a list when this happens so you can keep track,
+            use the fact that python lists are referenced by nature.
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>dfs: the function actually do the recursive logic.</li>
+              <li></li>
+            </ul>
+            </div>
         </div>
         </div>
       </main>
