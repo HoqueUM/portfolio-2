@@ -1,7 +1,6 @@
 "use client";
 
-// TODO: add "problem statement": which is basically just a description of how to identify what kind of problem is it.
-
+// TODO: need to add space and time complexity to each of these
 import Link from "next/link";
 import { BsArrowReturnLeft } from "react-icons/bs";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -230,7 +229,8 @@ def fn(head):
             <h2 className="font-bold">Problem Statement: </h2>
             <p>Given a binary tree, progress through the levels in some way.</p>
             <br />
-            A technique of progressing through a binary tree level by level.
+            A technique of progressing through a binary tree level by level in linear time.
+            Space depends. Could be the amount of nodes, or the widest level.
             <SyntaxHighlighter language="python" style={vscDarkPlus}>
             {`
 def fn(head):
@@ -262,7 +262,8 @@ def fn(head):
             <h2 className="font-bold">Problem Statement: </h2>
             <p>Given a binary tree, go to the bottom leaf nodes and do something.</p>
             <br />
-            A technique of progressing through a binary tree to the bottom in a certain way.
+            A technique of progressing through a binary tree to the bottom in a certain way in linear time.
+            Space would be the maximum depth of the tree.
             <SyntaxHighlighter language="python" style={vscDarkPlus}>
             {`
 def fn(head):
@@ -293,6 +294,68 @@ def fn(head):
             <ul>
               <li>dfs: the function actually do the recursive logic.</li>
               <li></li>
+            </ul>
+            </div>
+            <div>
+            <h1 className="font-bold">Backtracking (subsets)</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given an array, find the powerset of it</p>
+            <br />
+            A technique of progressing through a list to find all subsets in 2^n time.
+            Space is linear.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(nums):
+  def backtrack(numbers, res, curr, start):
+   res.append(curr[:])
+   for i in range(start, len(numbers)):
+    curr.append(numbers[i])
+    backtrack(numbers, res, curr, i + 1)
+    curr.pop()
+
+  result = []
+  current = []
+  backtrack(nums, result, current, 0)
+  return result
+
+            `}
+            </SyntaxHighlighter>
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>backtrack: the function to actually do the logic</li>
+            </ul>
+            </div>
+            <div>
+            <h1 className="font-bold">Backtracking (permutations)</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a list, find the permutations.</p>
+            <br />
+            A technique of progressing through a list to find all permutations in n! time.
+            Space is linear.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(nums):
+ def genPerms(res, numbers, permLength):
+  if permLength == len(numbers):
+   res.append(numbers[:])
+   return
+  
+   for i in range(permLength, len(numbers)):
+    numbers[i], numbers[permLength] = numbers[permLength], numbers[i]
+    genPerms(res, numbers, permLength + 1)
+    numbers[i], numbers[permLength] = numbers[permLength], numbers[i]
+ 
+  result = []
+  genPerms(result, nums, 0)
+  return result
+
+            `}
+            </SyntaxHighlighter>
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>genPerms: a function to do the logic</li>
             </ul>
             </div>
         </div>
