@@ -38,7 +38,7 @@ export default function Home() {
             <nav className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
               <a href="/projects/" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">projects</a>
               <div className="hidden sm:block bullet"></div>
-              <a href="https://drive.google.com/file/d/1-Kkd105lWaRqflDbkSNRE-_fVm_iPPsF/view" target="_blank" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">resume</a>
+              <a href="https://drive.google.com/file/d/1gck0CRxYID_gVrWC0T-o59epGgEdNmJ5/view" target="_blank" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">resume</a>
               <div className="hidden sm:block bullet"></div>
               <a href="mailto:rhoque@umich.edu" className="hover:text-gray-800 transition-colors pb-2 trace sm:pb-0">email</a>
               <div className="hidden sm:block bullet"></div>
