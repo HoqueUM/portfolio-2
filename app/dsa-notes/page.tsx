@@ -358,6 +358,72 @@ def fn(nums):
               <li>genPerms: a function to do the logic</li>
             </ul>
             </div>
+            <div>
+            <h1 className="font-bold">Binary Search</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a sorted array, find some value or range in the array.</p>
+            <br />
+            A technique of processing a value in a sorted array in log(n) time.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+def fn(nums):
+ def binarySearch(res, numbers, permLength):
+  left = 0
+  right = len(numbers) - 1
+  while left <= right:
+   mid = left + (right - left) // 2
+   if numbers[mid] == target:
+    return mid
+   elif numbers[mid] < target:
+    left = mid + 1
+   else:
+    right = mid - 1
+  return -1
+
+            `}
+            </SyntaxHighlighter>
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>left: your left pointer</li>
+              <li>right: your right pointer</li>
+              <li>mid: the middle pointer</li>
+            </ul>
+            </div>
+            <div>
+            <h1 className="font-bold">Top K elements</h1>
+            <br />
+            <h2 className="font-bold">Problem Statement: </h2>
+            <p>Given a data structure, find some k values in it that satisfy some condition</p>
+            <br />
+            A technique of finding the top k elements in a data structure in linear or nlog(n) time.
+            <SyntaxHighlighter language="python" style={vscDarkPlus}>
+            {`
+import heapq
+def fn(nums, k):
+ heapq.heapify(nums)
+ result = []
+
+ while k:
+  result.append(heapq.heappop(nums))
+  k -= 1
+ return result
+
+            `}
+            </SyntaxHighlighter>
+            These are your &apos;required&apos; variables:
+            <ul>
+              <li>heapq: imported library for priority queue</li>
+              <li>result: the result we are looking for</li>
+            </ul>
+            <h2 className="font-bold">Some Notes:</h2>
+            <p>
+              The heapq can take a list of tuples as the input, and it sorts it
+              based on the first elements of the tuples. Additionally, if you want to
+              find the largest elements, you can multiply the values by -1 since the 
+              heapq is a min-heap by default.
+            </p>
+            </div>
         </div>
         </div>
       </main>
